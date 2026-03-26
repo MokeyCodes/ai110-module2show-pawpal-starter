@@ -114,13 +114,13 @@ else:
         with col2:
             task_description = st.text_input("Task description", value="")
 
-        col3, col4, col5 = st.columns(3)
+        col3, col4, col5 = st.columns([1.2, 1.2, 1])
 
         with col3:
             task_time = st.text_input("Time (HH:MM)", value="09:00")
 
         with col4:
-            duration = st.number_input("Duration (minutes)", min_value=1, max_value=240, value=30)
+            duration = st.number_input("Duration (min)", min_value=1, max_value=240, value=30)
 
         with col5:
             frequency = st.selectbox("Frequency", ["once", "daily", "weekly"], key="freq_select")
