@@ -4,8 +4,16 @@
 
 **a. Initial design**
 
-- Briefly describe your initial UML design.
-- What classes did you include, and what responsibilities did you assign to each?
+The 3 core user actions identified:
+1. **Feeding** - Schedule and track daily meals
+2. **Grooming** - Schedule grooming activities (bathing, brushing, nail care)
+3. **Activity/Walks** - Schedule exercise and walking time
+
+Classes designed:
+- **Task**: Represents a single pet care activity (e.g., "Morning Walk"). Stores description, time, duration, frequency, and completion status.
+- **Pet**: Represents a pet (name, species, age). Maintains a list of tasks assigned to the pet.
+- **Owner**: Represents the pet owner. Manages multiple pets and provides centralized access to all pet data.
+- **Scheduler**: The "brain" of the system. Retrieves tasks from owner's pets, sorts/filters by time and priority, detects conflicts, and handles recurring task automation.
 
 **b. Design changes**
 
